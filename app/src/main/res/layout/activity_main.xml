@@ -25,7 +25,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="24dp"
                 android:contentDescription="@string/app_logo"
-                android:src="@drawable/agis_logo" />
+                android:src="@drawable/agi_logo" />
 
             <!-- Welcome Text -->
             <TextView
