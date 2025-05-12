@@ -5,6 +5,37 @@
     android:orientation="vertical"
     android:background="@drawable/purple_gradient_background">
 
+    <!-- Header with back button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:background="@drawable/button_primary"
+            android:fontFamily="@font/exo2_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Post Details"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/exo2_bold"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="48dp" />
+
+    </LinearLayout>
+
     <!-- Post Details -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,20 +83,21 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_replies"
+    <ListView
+        android:id="@+id/lv_replies"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
 
     <!-- Reply Input -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@color/white">
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/edt_reply"

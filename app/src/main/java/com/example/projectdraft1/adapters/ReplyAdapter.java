@@ -11,30 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.example.projectdraft1.R;
-import com.example.projectdraft1.models.NewsPost;
+import com.example.projectdraft1.models.Reply;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class NewsPostAdapter extends ArrayAdapter<NewsPost> {
+public class ReplyAdapter extends ArrayAdapter<Reply> {
     private Context context;
     private LayoutInflater inflater;
 
-    // Constructor that accepts posts list
-    public NewsPostAdapter(Context context, List<NewsPost> posts) {
-        super(context, R.layout.item_news_post, posts);
+    public ReplyAdapter(Context context, List<Reply> replies) {
+        super(context, R.layout.item_reply, replies);
         this.context = context;
         this.inflater = LayoutInflater.from(context);
-    }
-
-    // Update posts
-    public void setPosts(List<NewsPost> posts) {
-        clear();
-        addAll(posts);
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -43,7 +34,7 @@ public class NewsPostAdapter extends ArrayAdapter<NewsPost> {
         ViewHolder holder;
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.item_news_post, parent, false);
+            convertView = inflater.inflate(R.layout.item_reply, parent, false);
             holder = new ViewHolder();
             holder.txtAuthor = convertView.findViewById(R.id.txt_author);
             holder.txtContent = convertView.findViewById(R.id.txt_content);
@@ -53,24 +44,21 @@ public class NewsPostAdapter extends ArrayAdapter<NewsPost> {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        NewsPost post = getItem(position);
-        if (post != null) {
-            // Set post data
-            holder.txtAuthor.setText(post.getAuthorName());
-            holder.txtContent.setText(post.getContent());
-            holder.txtTimestamp.setText(formatTimestamp(post.getTimestamp()));
+        Reply reply = getItem(position);
+        if (reply != null) {
+            holder.txtAuthor.setText(reply.getAuthorName());
+            holder.txtContent.setText(reply.getContent());
+            holder.txtTimestamp.setText(formatTimestamp(reply.getTimestamp()));
         }
 
         return convertView;
     }
 
-    // Helper method
     private String formatTimestamp(long timestamp) {
         return new SimpleDateFormat("MMM dd, HH:mm", Locale.getDefault())
                 .format(new Date(timestamp));
     }
 
-    // ViewHolder
     static class ViewHolder {
         TextView txtAuthor;
         TextView txtContent;
