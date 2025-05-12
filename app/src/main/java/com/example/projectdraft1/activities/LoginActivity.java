@@ -209,16 +209,13 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     showLoading(false);
                     if (task.isSuccessful()) {
-                        Toast.makeText(LoginActivity.this,
-                                "Password reset email sent to " + email,
-                                Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Password reset email sent to " + email, Toast.LENGTH_LONG).show();
                     } else {
                         String errorMessage = "Failed to send reset email";
                         if (task.getException() != null) {
                             errorMessage = task.getException().getMessage();
                         }
-                        Toast.makeText(LoginActivity.this, errorMessage,
-                                Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_LONG).show();
                     }
                 });
     }

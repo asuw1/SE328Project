@@ -50,25 +50,25 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, ProfileActivity.class));
         });
 
-        cardNewsroom.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, NewsRoomActivity.class));
-        });
-
-        cardMessages.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, ChatListActivity.class));
-        });
-
-        cardAgenda.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AgendaActivity.class));
-        });
-
-        fabAnnouncements.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AnnouncementsActivity.class));
-        });
-
-        btnAdmin.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AdminDashboardActivity.class));
-        });
+//        cardNewsroom.setOnClickListener(v -> {
+//            startActivity(new Intent(MainActivity.this, NewsRoomActivity.class));
+//        });
+//
+//        cardMessages.setOnClickListener(v -> {
+//            startActivity(new Intent(MainActivity.this, ChatListActivity.class));
+//        });
+//
+//        cardAgenda.setOnClickListener(v -> {
+//            startActivity(new Intent(MainActivity.this, AgendaActivity.class));
+//        });
+//
+//        fabAnnouncements.setOnClickListener(v -> {
+//            startActivity(new Intent(MainActivity.this, AnnouncementsActivity.class));
+//        });
+//
+//        btnAdmin.setOnClickListener(v -> {
+//            startActivity(new Intent(MainActivity.this, AdminDashboardActivity.class));
+//        });
 
         // Update welcome message
         updateWelcomeMessage();

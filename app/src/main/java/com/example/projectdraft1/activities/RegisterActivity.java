@@ -2,6 +2,8 @@ package com.example.projectdraft1.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -108,6 +110,17 @@ public class RegisterActivity extends AppCompatActivity {
                                     if (profileTask.isSuccessful()) {
                                         // Save user to database
                                         saveUserToDatabase(user, name);
+                                        Toast.makeText(RegisterActivity.this, "Registeration successful, redirecting back to main menu", Toast.LENGTH_LONG).show();
+
+                                        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                                finish();
+                                            }
+                                        }, 2000);
+
+
+
                                     }
                                 });
                     } else {
