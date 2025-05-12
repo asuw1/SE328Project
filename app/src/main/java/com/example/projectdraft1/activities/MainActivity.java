@@ -61,10 +61,10 @@ public class MainActivity extends AppCompatActivity {
         cardAgenda.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AgendaActivity.class));
         });
-//
-//        fabAnnouncements.setOnClickListener(v -> {
-//            startActivity(new Intent(MainActivity.this, AnnouncementsActivity.class));
-//        });
+
+        fabAnnouncements.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, AnnouncementsActivity.class));
+        });
 //
 //        btnAdmin.setOnClickListener(v -> {
 //            startActivity(new Intent(MainActivity.this, AdminDashboardActivity.class));
