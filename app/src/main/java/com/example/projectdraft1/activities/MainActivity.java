@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity {
         fabAnnouncements.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AnnouncementsActivity.class));
         });
-//
-//        btnAdmin.setOnClickListener(v -> {
-//            startActivity(new Intent(MainActivity.this, AdminDashboardActivity.class));
-//        });
+
+        btnAdmin.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, AdminDashboardActivity.class));
+        });
 
         // Update welcome message
         updateWelcomeMessage();
