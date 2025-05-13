@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/post_background">
+
+    <!-- User Name and Timestamp -->
+    <TextView
+        android:id="@+id/txt_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="John Doe"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_purple_dark"
+        android:fontFamily="@font/exo2_medium"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/txt_timestamp" />
+
+    <TextView
+        android:id="@+id/txt_timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2:30 PM"
+        android:textSize="12sp"
+        android:textColor="@color/text_medium"
+        android:fontFamily="@font/titillium_web"
+        android:layout_alignParentEnd="true" />
+
+    <!-- Last Message and Unread Count -->
+    <TextView
+        android:id="@+id/txt_last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello, how are you?"
+        android:textSize="14sp"
+        android:textColor="@color/text_dark"
+        android:fontFamily="@font/titillium_web"
+        android:layout_below="@id/txt_user_name"
+        android:layout_marginTop="4dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@id/txt_unread_count" />
+
+    <TextView
+        android:id="@+id/txt_unread_count"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:text="2"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/titillium_web_bold"
+        android:background="@drawable/unread_badge"
+        android:gravity="center"
+        android:layout_below="@id/txt_timestamp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

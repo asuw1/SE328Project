@@ -53,11 +53,11 @@ public class MainActivity extends AppCompatActivity {
         cardNewsroom.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, NewsRoomActivity.class));
         });
-//
-//        cardMessages.setOnClickListener(v -> {
-//            startActivity(new Intent(MainActivity.this, ChatListActivity.class));
-//        });
-//
+
+        cardMessages.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, ChatListActivity.class));
+        });
+
         cardAgenda.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, AgendaActivity.class));
         });
