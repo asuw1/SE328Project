@@ -191,9 +191,6 @@ public class UserSelectionActivity extends AppCompatActivity {
     }
 
     private void navigateToChat(String chatId, String otherUserName, String otherUserId) {
-        // Debug logging
-        Log.d("UserSelection", "Navigating to chat - ID: " + chatId +
-                ", Name: " + otherUserName + ", UserID: " + otherUserId);
 
         Intent intent = new Intent(UserSelectionActivity.this, ChatActivity.class);
         intent.putExtra("chat_id", chatId);
