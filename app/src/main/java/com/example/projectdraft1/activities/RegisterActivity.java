@@ -137,7 +137,6 @@ public class RegisterActivity extends AppCompatActivity {
         userData.put("name", name);
         userData.put("email", user.getEmail());
         userData.put("userId", user.getUid());
-        userData.put("photoUrl", "");
         userData.put("isAdmin", false);
         userData.put("createdAt", System.currentTimeMillis());
 

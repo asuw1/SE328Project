@@ -186,8 +186,6 @@ public class LoginActivity extends AppCompatActivity {
         userData.put("email", firebaseUser.getEmail());
         userData.put("name", firebaseUser.getDisplayName() != null ?
                 firebaseUser.getDisplayName() : "User");
-        userData.put("photoUrl", firebaseUser.getPhotoUrl() != null ?
-                firebaseUser.getPhotoUrl().toString() : "");
         userData.put("isAdmin", false);
         userData.put("createdAt", System.currentTimeMillis());
 
