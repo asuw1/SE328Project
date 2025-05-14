@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.projectdraft1"
+    namespace = "com.example.agievent"
     compileSdk = 35
 
     defaultConfig {
